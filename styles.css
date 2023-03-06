@@ -1,0 +1,122 @@
+Universal Selector
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+/* Element Selector  */
+body{
+    font-family: "Lucida Sans", sans-serif;
+    /* font-family: 'Ubuntu', sans-serif; */
+    /* font-size: 20px; */
+}
+
+
+/* Class Selector */
+
+.header{
+    width: 100%;
+    height: 20vh;
+    background-color: blueviolet;
+    color: white;
+    text-align: left;
+    padding: 5px 5px 5px 20px;
+    margin-bottom: 10px;
+}
+
+.flex_container{
+    margin-bottom: 10px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    height: 60vh;
+    justify-content: flex-start;
+    /* border:2px solid red */
+}
+
+.flex_left{
+    /* display: flex; */
+    width: 20vw;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    clear: both;
+    /* border: 2px solid blue; */
+}
+
+.flex_left ul li{
+    list-style: none;
+    margin: 4px;
+    width: inherit;
+    padding: 10px ;
+    background-color: #16c6ff;
+    align-self: left;
+    /* text-align: center; */
+    color: white;
+}
+
+.flex_middle{
+    /* border: 2px solid red; */
+    padding: 10px;
+    width: 50vw;
+    clear: both;
+    /* display: flex; */
+}
+
+.flex_right{
+    background-color: #16c6ff;
+    color: white;
+    width: 30vw;
+    padding: 10px;
+    overflow: auto;
+    clear: both;
+    /* border: 2px solid red; */
+}
+
+.footer{
+    /* height: 20vh; */
+    margin-top: 10px;
+    background-color: #16c6ff;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width:1300px) {
+    .flex_container{
+        flex-wrap: wrap ;       
+    }
+    .header{
+        height: 10vh;
+    }
+    .flex_left{
+        width: 40%;
+    }
+    .flex_middle{
+        width: 40%;
+    }
+    .flex_right{
+        width: 100%;
+    }
+    .footer{
+        top:75%;
+        position: fixed;
+        width: 100vw;
+        
+    }
+}
+
+@media (max-width:400px) {
+    .flex_left , .flex_middle{
+        width: 100%;
+        height: 25vh;
+    }
+    .flex_right{
+        overflow: hidden;
+        height: 50vh;
+    }
+    .footer{
+        visibility: hidden;
+    }
+}
